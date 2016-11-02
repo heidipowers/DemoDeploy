@@ -150,6 +150,7 @@ h1 {
     height: auto;
     right: 20%;
     top: 2%;
+    display: none;
 }
 
 .flicker {
