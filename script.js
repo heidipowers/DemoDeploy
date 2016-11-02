@@ -5,7 +5,6 @@ $(document).ready(function() {
     var $text = $('.text');
     $work.hover(
         function() {
-            console.log($(this))
             $(this).find($text).toggle();
         }
     );
@@ -48,7 +47,13 @@ $(document).ready(function() {
                 });
             }
 
-
+ var toggle = function(element) {
+            $('img.off').css({ 'opacity': element ? '1' : '0' });
+        }
+ function flicker() {
+            toggle(Math.random() > 0.8), setTimeout(flicker, 100 * Math.random() * 0.2);
+        };
+    flicker();
 
     //end file
 })

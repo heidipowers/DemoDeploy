@@ -99,7 +99,7 @@ nav li a:hover {
 #work {
     margin: 4em 0 0 0;
     background-color:  #dcdcdc;
-    padding-top: 2em;
+    padding: 2em 0 5em 0;
 }
 
 img {
@@ -110,6 +110,16 @@ img {
 
 img:hover {
     opacity: .5;
+}
+
+#taco {
+  position: absolute;
+  top: -107px;
+
+}
+
+#taco:hover {
+  opacity: 1;
 }
 
 h1 {
@@ -140,6 +150,20 @@ h1 {
     height: auto;
     right: 20%;
     top: 2%;
+}
+
+.flicker {
+  opacity:  .1;
+}
+
+.flicker img {
+    position: absolute;
+    left: 10%;
+    bottom:  30%;
+    transform: rotate(30deg);
+    width:  300px;
+    height:  auto;
+
 }
 
 .text {
