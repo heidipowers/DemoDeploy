@@ -26,33 +26,35 @@ $(document).ready(function() {
         }
     });
 
-    $(document).on("scroll", onScroll);
-            function onScroll(event){
-                var previousScrollTop = 0, scrollLock = false;
-                var scrollPos = $(document).scrollTop() + $(window).height()/2.5;
-                $('nav a').each(function () {
-                    var currLink = $(this);
-                    var refElement = $(currLink.attr("href"));
-                    if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                        $('nav li').removeClass("active");
-                        currLink.parent('li').addClass("active");
-                        if(scrollLock) {
-                            $(window).scrollTop(previousScrollTop)
-                        }
-                        previousScrollTop = $(window).scrollTop();
-                    }
-                    else{
-                        currLink.removeClass("active");
-                    }
-                });
+    function onScroll(event) {
+        var previousScrollTop = 0,
+            scrollLock = false;
+        var scrollPos = $(document).scrollTop() + $(window).height() / 2.5;
+        $('nav a').each(function() {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('nav li').removeClass("active");
+                currLink.parent('li').addClass("active");
+                if (scrollLock) {
+                    $(window).scrollTop(previousScrollTop)
+                }
+                previousScrollTop = $(window).scrollTop();
+            } else {
+                currLink.removeClass("active");
             }
+        });
+    }
 
- var toggle = function(element) {
-            $('img.off').css({ 'opacity': element ? '1' : '0' });
-        }
- function flicker() {
-            toggle(Math.random() > 0.8), setTimeout(flicker, 100 * Math.random() * 0.2);
-        };
+    $(document).on("scroll", onScroll);
+
+    var toggle = function(element) {
+        $('img.off').css({ 'opacity': element ? '1' : '0' });
+    }
+
+    function flicker() {
+        toggle(Math.random() > 0.8), setTimeout(flicker, 100 * Math.random() * 0.2);
+    };
     flicker();
 
     //end file
