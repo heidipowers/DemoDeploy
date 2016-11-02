@@ -30,7 +30,7 @@ $(document).ready(function() {
         var previousScrollTop = 0,
             scrollLock = false;
         var scrollPos = $(document).scrollTop() + $(window).height() / 2.5;
-        $('a[href*="#"]:not([href="#"])').each(function() {
+        $('nav a[href*="#"]:not([href="#"])').each(function() {
             var currLink = $(this);
             var refElement = $(currLink.attr("href"));
             if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
