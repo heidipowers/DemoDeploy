@@ -15,6 +15,8 @@ $(document).ready(function() {
     $('a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
+            $('nav li').removeClass('active');
+            $(this).parent('li').addClass('active');
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 $('html, body').animate({
@@ -24,6 +26,29 @@ $(document).ready(function() {
             }
         }
     });
+
+    $(document).on("scroll", onScroll);
+            function onScroll(event){
+                var previousScrollTop = 0, scrollLock = false;
+                var scrollPos = $(document).scrollTop() + $(window).height()/2.5;
+                $('nav a').each(function () {
+                    var currLink = $(this);
+                    var refElement = $(currLink.attr("href"));
+                    if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                        $('nav li').removeClass("active");
+                        currLink.parent('li').addClass("active");
+                        if(scrollLock) {
+                            $(window).scrollTop(previousScrollTop)
+                        }
+                        previousScrollTop = $(window).scrollTop();
+                    }
+                    else{
+                        currLink.removeClass("active");
+                    }
+                });
+            }
+
+
 
     //end file
 })

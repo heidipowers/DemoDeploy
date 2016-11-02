@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>DemoDeploy</title>
     <link rel="stylesheet" href="style.css">
-    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300|Raleway:400,700,100,200' rel='stylesheet' type='text/css'>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300|Raleway:400,700,100,200' rel='stylesheet' type='text/css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
-    <header>
+    <header id="count">
         <div class="triangle"></div>
         <nav>
             <ul>
-                <li><a href="//github.com/heidipowers/DemoDeploy/blob/master/README.md">Deployment</a></li>
+                <!-- <li><a href="http://github.com/heidipowers/DemoDeploy/blob/master/README.md">Deployment</a></li> -->
                 <li><a href="#agile">Agile</a></li>
                 <li><a href="#mvp">MVP</a></li>
                 <li><a href="#user-stories">User Stories</a></li>
@@ -51,7 +51,7 @@
     <section id="mvp" class="educate">
         <div class="contain">
             <h2>MVP</h2>
-            <p>Minimal Viable Product Minimal Viable Product, or MVP, is essentially the bare bones of a project. It is all of the features and functionality that are required in order to deliver a product that meets its purpose. In our case, does your project meet all the requirements of the prompt?</p>
+            <p>Minimal Viable Product, or MVP, is essentially the bare bones of a project. It is all of the features and functionality that are required in order to deliver a product that meets its purpose. In our case, does your project meet all the requirements of the prompt?</p>
             <p>When you build a product, you make many assumptions. You assume you know what users are looking for, how the design should work, what marketing strategy to use, what architecture will work most efficiently, which monetization strategy will make it sustainable, and which laws and regulations you have to comply with. No matter how good you are, some of your assumptions will be wrong. The problem is, you don’t know which ones. Test early, test often.</p>
             <p>Set reach goals, this is what you will do after you have a MVP to take your project to the next level.</p>
             <p class="special">Danger Zone: 90% of the users only use 10% of the features. It's a cautionary tale of feature creep...</p>
@@ -63,8 +63,8 @@
             <p>In an agile framework, user stories are the smallest units of work. The goal of a user story is to deliver a particular value back to the customer. Note that "customers" don't have to be external end users in the traditional sense: they can also be internal customers, colleagues, or classmates who will be using your product. User stories are a few sentences in simple language that outline the desired outcome. They don't go into detailed requirements.</p>
             <p>User stories are often written using the following template:</p>
             <p class="special">As a <em>&lt;type of user&gt;</em>, I want <em>&lt;goal&gt;</em> so that I <em>&lt;receive benefit&gt;</em>.</p>
-            <p>Let's use a website as a simple example to create a user story:</p>
-            <p class="special">As a visitor, I want to be access this game on the internet so I can kill time and avoid interacting with people.</p>
+            <p>Let's use our game as a simple example to create a user story:</p>
+            <p class="special">As a visitor, I want to access this game on the internet so I can kill time and avoid interacting with people.</p>
         </div>
     </section>
     <section id="wireframes" class="educate">
@@ -124,6 +124,7 @@
             <div class="work">
                 <img src="images/taco.jpg" />
                 <a class="text" href="//trello.com/tour">
+                    <img id="taco" src="images/tacoGif.gif">
                     <p>Did someone say Taco?</p>
                 </a>
             </div>
